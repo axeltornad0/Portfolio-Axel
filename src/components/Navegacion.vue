@@ -8,13 +8,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
+
 import { scrollToSection } from '@/utils/scrollToSection';
 
-interface MenuItems {
-    label: string,
-    href: string,
-    onClick?: () => void
-}
 
 const menuItems = [
   {
@@ -50,7 +46,11 @@ const menuItems = [
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Trabajos</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>
+                        <RouterLink to="/portfolio">
+                           Trabajos 
+                        </RouterLink>
+                    </NavigationMenuTrigger>
                     <NavigationMenuContent>
                     <NavigationMenuItem v-for="item in menuItems" :key="item.label">
                             <a
@@ -58,13 +58,46 @@ const menuItems = [
                             @click.prevent="item.onClick ? item.onClick() : null"
                             >
                                 <NavigationMenuLink>
-                                <!-- mezcla de la clase que me da  -->
+
                                 {{item.label}}
                                 </NavigationMenuLink>
                             </a>  
                             </NavigationMenuItem>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
+
+                <!-- <NavigationMenuItem>
+                    <NavigationMenuTrigger>Trabajos</NavigationMenuTrigger>
+                    <NavigationMenuContent>
+       
+                        <NavigationMenuLink>
+                            <RouterLink to="/portfolio">
+                                Ilustración
+                            </RouterLink>     
+                        </NavigationMenuLink>
+
+                        <NavigationMenuLink>
+                            <RouterLink to="/portfolio">
+                                Cómic
+                            </RouterLink>     
+                        </NavigationMenuLink>
+
+                        <NavigationMenuLink>
+                            <RouterLink to="/portfolio">
+                                Diseño gráfico
+                            </RouterLink>     
+                        </NavigationMenuLink>
+                      
+                    </NavigationMenuContent>
+                </NavigationMenuItem> -->
+
+                <!-- <NavigationMenuItem>
+                    <NavigationMenuLink>
+                    <RouterLink to="/portfolio">
+                        Trabajos
+                    </RouterLink>
+                    </NavigationMenuLink>
+                </NavigationMenuItem> -->
 
                 <NavigationMenuItem>
                     <NavigationMenuLink>

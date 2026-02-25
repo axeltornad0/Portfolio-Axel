@@ -1,17 +1,15 @@
 import { router } from "@/router";
 
-
 export const scrollToSection = (sectionId: string) => {
-    
-  
-    if (sectionId === "#") {
+
+   if (sectionId === "#") {
     window.scrollTo({top:0, behavior: 'smooth'})
     return
   }
 
   const element = document.querySelector<HTMLElement>(sectionId);
-
-    if (element) {
+  
+  if (element) {
       element.scrollIntoView({behavior: 'smooth', block: 'start'})
-    }
+  }
 }
