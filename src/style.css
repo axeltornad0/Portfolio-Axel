@@ -1,6 +1,41 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+body {
+  font-family: 'Stack Sans';
+}
+
+@font-face {
+  font-family: Gabarito;
+  src: url("../fonts/Gabarito-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Moonrising;
+  src: url("../fonts/Moonrising.ttf");
+}
+
+@font-face {
+  font-family: Mulish;
+  src: url("../fonts/Mulish-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Questrial;
+  src: url("../fonts/Questrial-Regular.ttf");
+}
+
+@font-face {
+  font-family: Stack Sans Headline;
+  src: url("../fonts/StackSansHeadline-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Stack Sans;
+  src: url("../fonts/StackSansText-VariableFont_wght.ttf");
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

@@ -5,7 +5,11 @@
 
 <template>
 
-<h1>Diseño web y apps interactivas</h1>
+<div class="">
+    <h1>Axel Tornado</h1>
+</div>
+
+
 
 
 </template>
