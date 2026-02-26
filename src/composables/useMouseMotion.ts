@@ -16,12 +16,12 @@ export const useMouseMotion = () => {
         const centerX = rect.width/2
         const centerY = rect.height/2
 
-        const mouseX = event.clientX
-        const mouseY = event.clientY
+        const mouseX = event.clientX + rect.left
+        const mouseY = event.clientY + rect.top
 
         mousePosition.value = {
-            x: (centerX+mouseX) * 0.1,
-            y: (centerY+mouseY) * 0.1
+            x: (centerX+mouseX) * 0.3,
+            y: (centerY+mouseY) * 0.3
         }
     }
 

@@ -22,8 +22,8 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
         @mousemove="mouseMove"
         @mouseleave="mouseLeave"
         :style="{
-            backgroundPositionX: `${mousePosition.x}px`,
-            backgroundPositionY: `${mousePosition.y}px`,
+            backgroundPositionX: `calc(50% + ${mousePosition.x}px)`,
+            backgroundPositionY: `calc(50% + ${mousePosition.y}px)`,
             transition: 'background-position 0.1s ease'
         }"
         ></div>
@@ -39,16 +39,6 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
     </div>
 </div>
 
-
-
-    <!-- @mousemove="cumMouseMove"
-         @mouseleave="cumMouseLeave"
-         :style="{
-           backgroundPositionX: `calc(50% + ${mousePositione.x}px)`,
-           backgroundPositionY: `calc(50% + ${mousePositione.y}px)`,
-           transition: 'background-position 0.1s ease'
-         }" -->
-    <!-- esto se pone dentro del div que tenga la pupila -->
 
 
 </template>
