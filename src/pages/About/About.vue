@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div>
+    <div class="grid grid-cols-2">
         <h1>About me</h1>
     </div>
 </template>

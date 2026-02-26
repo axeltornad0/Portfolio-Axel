@@ -8,14 +8,22 @@ import Navegacion from './components/Navegacion.vue';
 </script>
 
 <template>
-  <header>
-    <Navegacion />
-  </header>
-    
-  <main class="pt-7">   
-    <RouterView />
-  </main>
+  
 
+  <div class="grid grid-row-[auto_1fr_auto]">
+    <header>
+      <Navegacion class="z-30 absolute"/>
+    </header>
+      
+    <main class="pt-7">   
+      <RouterView />
+    </main>
+
+    <footer >
+      <p>Holaaaa</p>
+    </footer>
+
+  </div>
 
 </template>
 

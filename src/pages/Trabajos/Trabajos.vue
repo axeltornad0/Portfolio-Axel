@@ -11,7 +11,7 @@
         <h1> Ilustración</h1>
     </section>
 
-    <section id="comic" class="bg-blue-200 h-200">
+    <section id="comic" class="bg-blue-200 h-150">
         <h1> Cómic </h1>
     </section>
 

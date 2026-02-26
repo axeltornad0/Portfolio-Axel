@@ -8,6 +8,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
+//import { router } from '@/router';
 
 import { scrollToSection } from '@/utils/scrollToSection';
 
@@ -71,19 +72,19 @@ const menuItems = [
                     <NavigationMenuContent>
        
                         <NavigationMenuLink>
-                            <RouterLink to="/portfolio">
+                            <RouterLink to="/portfolio#ilustracion">
                                 Ilustración
                             </RouterLink>     
                         </NavigationMenuLink>
 
                         <NavigationMenuLink>
-                            <RouterLink to="/portfolio">
+                            <RouterLink to="/portfolio#comic">
                                 Cómic
                             </RouterLink>     
                         </NavigationMenuLink>
 
                         <NavigationMenuLink>
-                            <RouterLink to="/portfolio">
+                            <RouterLink to="/portfolio#diseno">
                                 Diseño gráfico
                             </RouterLink>     
                         </NavigationMenuLink>
