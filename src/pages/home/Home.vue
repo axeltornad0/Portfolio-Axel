@@ -12,31 +12,46 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
 
 <div class="">
     
-    
-    <div class="flex flex-row bg-black">
-        
-        <div class="fondo-ojo"></div>
+    <div class="relative h-160 bg-black flex" @mousemove="mouseMove"
+            @mouseleave="mouseLeave">
+        <div class="flex flex-row w-screen justify-around z-10 absolute"
+            >
+                <div id="pupilaDer"
+                class="h-150 w-150"
+                :style="{
+                    backgroundPositionX: `calc(50% - ${mousePosition.x}px)`,
+                    backgroundPositionY: `calc(50% - ${mousePosition.y}px)`,
+                    transition: 'background-position 0.1s ease'
+                }"
+                
+                ></div>
 
-        <div id="pupila"
-        class="h-150 w-150"
-        @mousemove="mouseMove"
-        @mouseleave="mouseLeave"
-        :style="{
-            backgroundPositionX: `calc(50% + ${mousePosition.x}px)`,
-            backgroundPositionY: `calc(50% + ${mousePosition.y}px)`,
-            transition: 'background-position 0.1s ease'
-        }"
-        ></div>
+                <div id="pupilaIzq"
+                class="h-150 w-150"
+                :style="{
+                    backgroundPositionX: `calc(50% - ${mousePosition.x}px)`,
+                    backgroundPositionY: `calc(50% - ${mousePosition.y}px)`,
+                    transition: 'background-position 0.1s ease'
+                }"
+                ></div>
+            </div>
 
-        <img class="object-contain absolute inset-0 z-20 pointer-events-none"
-        src="/imagenes/casa/parpado.png" alt="">
-        
-        
+            <div class="flex flex-row justify-around z-20 pointer-events-none w-screen inset-0 absolute">
+                    <img class="object-contain h-150 w-150"
+                    src="/imagenes/casa/parpado.png" alt="">
+
+                    <img class="object-contain h-150 w-150"
+                    src="/imagenes/casa/parpadoIZQ.png" alt="">
+
+            </div>
+            
+            <div class="text-white text-4xl pb-8 z-30 absolute text-center mx-auto w-screen inset-x-0 bottom-0 pointer-events-none">
+                <h1 >AXEL TORNADO</h1>
+            </div>
+
+            
     </div>
     
-    <div class="flex flex-col justify-end items-center bg-red-300 h-screen w-full">
-        <h1 class="text-white text-4xl pb-8">AXEL TORNADO</h1>
-    </div>
 </div>
 
 
@@ -50,20 +65,28 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
 
     .fondo-ojo {
         background-color: white;
-        width: 600px;
         height: 600px;
         z-index: 0;
         position: absolute;
         pointer-events: none;
     }
 
-    div#pupila {
+    div#pupilaDer {
         background-size: 100% 100%;
         background-position: center center;
-        /* background-color: transparent; */
+        background-color: white;
         background-image: url('../imagenes/casa/pupila.png');
         background-repeat: no-repeat;
-        z-index: 10;
+        aspect-ratio: 1/1;
+    }
+
+    div#pupilaIzq {
+        background-size: 100% 100%;
+        background-position: center center;
+        background-color: white;
+        background-image: url('../imagenes/casa/pupila.png');
+        background-repeat: no-repeat;
+        aspect-ratio: 1/1;
     }
 
 
