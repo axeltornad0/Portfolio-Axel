@@ -19,8 +19,8 @@ import Navegacion from './components/Navegacion.vue';
       <RouterView />
     </main>
 
-    <footer >
-      <p>Holaaaa</p>
+    <footer class="text-[12px] p-2 flex items-end justify-center">
+      <p> Página creada por Axel Tornado, 2026. </p>
     </footer>
 
   </div>

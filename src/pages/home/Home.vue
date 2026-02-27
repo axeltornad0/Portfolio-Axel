@@ -10,13 +10,12 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
 
 <template>
 
-<div class="">
-    
-    <div class="relative w-[100vw] h-[40vw] bg-black flex justify-around" @mousemove="mouseMove"
+<header class="">
+    <div class="relative w-screen h-[40vw] bg-black flex justify-around" @mousemove="mouseMove"
             @mouseleave="mouseLeave">
-        <div class="w-[100vw] flex flex-row justify-around z-10"
+        <div class="w-screen flex flex-row justify-around z-10"
             >
-                <div id="pupilaDer"
+                <div id="pupila"
                 :style="{
                     backgroundPositionX: `calc(50% - ${mousePosition.x}px)`,
                     backgroundPositionY: `calc(50% - ${mousePosition.y}px)`,
@@ -25,7 +24,7 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
                 
                 ></div>
 
-                <div id="pupilaDer"
+                <div id="pupila"
                 :style="{
                     backgroundPositionX: `calc(50% - ${mousePosition.x}px)`,
                     backgroundPositionY: `calc(50% - ${mousePosition.y}px)`,
@@ -43,14 +42,12 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
 
             </div>
             
-            <div class="text-white text-[4vw] pb-3 z-30 absolute text-center mx-auto w-screen bottom-[1%] pointer-events-none">
+            <div class="text-white text-[3vw] transition-all sm:text-[4vw] lg:text-[5vw] pb-3 z-30 absolute text-center mx-auto w-screen bottom-[1%] pointer-events-none">
                 <h1 >AXEL TORNADO</h1>
-            </div>
-
-            
+            </div>      
     </div>
     
-</div>
+</header>
 
 
 
@@ -61,9 +58,9 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
         font-family: Stack Sans Headline;
     }
 
-    div#pupilaDer {
-        max-width: 600px;
-        max-height: 600px;
+    div#pupila {
+        max-width: 40vw;
+        max-height: 40vw;
         background-size: 100% 100%;
         background-position: center center;
         background-color: white;
@@ -74,7 +71,7 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
 
     .parpado {
         object-fit: contain;
-        max-width: 600px;
+        max-width: 40vw;
     }
 
 </style>
