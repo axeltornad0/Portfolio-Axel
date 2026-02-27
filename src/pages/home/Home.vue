@@ -12,12 +12,11 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
 
 <div class="">
     
-    <div class="relative h-160 bg-black flex" @mousemove="mouseMove"
+    <div class="relative w-[100vw] h-[40vw] bg-black flex justify-around" @mousemove="mouseMove"
             @mouseleave="mouseLeave">
-        <div class="flex flex-row w-screen justify-around z-10 absolute"
+        <div class="w-[100vw] flex flex-row justify-around z-10"
             >
                 <div id="pupilaDer"
-                class="h-150 w-150"
                 :style="{
                     backgroundPositionX: `calc(50% - ${mousePosition.x}px)`,
                     backgroundPositionY: `calc(50% - ${mousePosition.y}px)`,
@@ -26,8 +25,7 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
                 
                 ></div>
 
-                <div id="pupilaIzq"
-                class="h-150 w-150"
+                <div id="pupilaDer"
                 :style="{
                     backgroundPositionX: `calc(50% - ${mousePosition.x}px)`,
                     backgroundPositionY: `calc(50% - ${mousePosition.y}px)`,
@@ -36,16 +34,16 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
                 ></div>
             </div>
 
-            <div class="flex flex-row justify-around z-20 pointer-events-none w-screen inset-0 absolute">
-                    <img class="object-contain h-150 w-150"
+            <div class="h-[40vw] flex flex-row justify-around z-20 pointer-events-none top-0 inset-x-0 absolute">
+                    <img class="parpado"
                     src="/imagenes/casa/parpado.png" alt="">
 
-                    <img class="object-contain h-150 w-150"
+                    <img class="parpado"
                     src="/imagenes/casa/parpadoIZQ.png" alt="">
 
             </div>
             
-            <div class="text-white text-4xl pb-8 z-30 absolute text-center mx-auto w-screen inset-x-0 bottom-0 pointer-events-none">
+            <div class="text-white text-[4vw] pb-3 z-30 absolute text-center mx-auto w-screen bottom-[1%] pointer-events-none">
                 <h1 >AXEL TORNADO</h1>
             </div>
 
@@ -63,15 +61,9 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
         font-family: Stack Sans Headline;
     }
 
-    .fondo-ojo {
-        background-color: white;
-        height: 600px;
-        z-index: 0;
-        position: absolute;
-        pointer-events: none;
-    }
-
     div#pupilaDer {
+        max-width: 600px;
+        max-height: 600px;
         background-size: 100% 100%;
         background-position: center center;
         background-color: white;
@@ -80,14 +72,9 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
         aspect-ratio: 1/1;
     }
 
-    div#pupilaIzq {
-        background-size: 100% 100%;
-        background-position: center center;
-        background-color: white;
-        background-image: url('../imagenes/casa/pupila.png');
-        background-repeat: no-repeat;
-        aspect-ratio: 1/1;
+    .parpado {
+        object-fit: contain;
+        max-width: 600px;
     }
-
 
 </style>
