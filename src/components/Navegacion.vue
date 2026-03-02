@@ -13,6 +13,13 @@ import {
 import { scrollToSection } from '@/utils/scrollToSection';
 import { useRouter } from 'vue-router';
 
+import {
+  HouseHeart,
+  Palette,
+  Fish,
+
+} from 'lucide-vue-next';
+
 
 const menuItems = [
   {
@@ -26,9 +33,19 @@ const menuItems = [
     onClick: () => scrollToSection('#comic'),
   },
   {
+    label: 'Diseño de personajes',
+    href: '#personajes',
+    onClick: () => scrollToSection('#personajes'),
+  },
+  {
     label: 'Diseño gráfico',
     href: '#diseno',
     onClick: () => scrollToSection('#diseno'),
+  },
+  {
+    label: 'Otros',
+    href: '#otros',
+    onClick: () => scrollToSection('#otros'),
   },
 ]
 
@@ -53,14 +70,21 @@ const irSeccionObras = (hash: string) => {
                 <NavigationMenuItem>
                     <NavigationMenuLink>
                     <RouterLink to="/">
-                        Home
+                        <span class="flex flex-row flex-nowrap">
+                            <HouseHeart class="iconos"/>
+                            Home
+                        </span>
+                        
                     </RouterLink>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>
-                           Trabajos 
+                        <span class="flex flex-row flex-nowrap">
+                            <Palette class="iconos"/>
+                            Trabajos 
+                        </span>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                     <NavigationMenuItem v-for="item in menuItems" :key="item.label">
@@ -69,7 +93,8 @@ const irSeccionObras = (hash: string) => {
                             @click.prevent="item.onClick ? item.onClick() : null"
                             @click="irSeccionObras(item.href)"
                             >
-                                <NavigationMenuLink>
+                                <NavigationMenuLink
+                                class="w-25 md:w-40">
 
                                 {{item.label}}
                                 </NavigationMenuLink>
@@ -78,43 +103,15 @@ const irSeccionObras = (hash: string) => {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                <!-- <NavigationMenuItem>
-                    <NavigationMenuTrigger>Trabajos</NavigationMenuTrigger>
-                    <NavigationMenuContent>
-       
-                        <NavigationMenuLink>
-                            <RouterLink to="/portfolio#ilustracion">
-                                Ilustración
-                            </RouterLink>     
-                        </NavigationMenuLink>
-
-                        <NavigationMenuLink>
-                            <RouterLink to="/portfolio#comic">
-                                Cómic
-                            </RouterLink>     
-                        </NavigationMenuLink>
-
-                        <NavigationMenuLink>
-                            <RouterLink to="/portfolio#diseno">
-                                Diseño gráfico
-                            </RouterLink>     
-                        </NavigationMenuLink>
-                      
-                    </NavigationMenuContent>
-                </NavigationMenuItem> -->
-
-                <!-- <NavigationMenuItem>
-                    <NavigationMenuLink>
-                    <RouterLink to="/portfolio">
-                        Trabajos
-                    </RouterLink>
-                    </NavigationMenuLink>
-                </NavigationMenuItem> -->
-
                 <NavigationMenuItem>
                     <NavigationMenuLink>
                     <RouterLink to="/about-me">
-                        Sobre mí
+                        <span class="flex flex-row flex-nowrap">
+                            <Fish class="iconos"/>
+                            Sobre mí
+                        </span>
+                        
+                        
                     </RouterLink>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -135,6 +132,12 @@ const irSeccionObras = (hash: string) => {
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+.iconos {
+    padding-right: 5px;
+    width: 23px;
+    height: 100%;
 }
 
 </style>
