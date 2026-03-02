@@ -8,7 +8,7 @@
     </div>
 
     <section id="ilustracion" class="bg-amber-200 h-200">
-        <h1> Ilustración </h1>
+        <h1 class="text-xl"> Ilustración </h1>
     </section>
 
     <section id="comic" class="bg-blue-200 h-150">

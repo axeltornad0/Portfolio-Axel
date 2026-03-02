@@ -65,10 +65,10 @@ const irSeccionObras = (hash: string) => {
     <div>
         <nav class="extra-nav">
             <NavigationMenu>
-                <NavigationMenuList>
+                <NavigationMenuList >
                 
-                <NavigationMenuItem>
-                    <NavigationMenuLink>
+                <NavigationMenuItem >
+                    <NavigationMenuLink >
                     <RouterLink to="/">
                         <span class="flex flex-row flex-nowrap">
                             <HouseHeart class="iconos"/>
