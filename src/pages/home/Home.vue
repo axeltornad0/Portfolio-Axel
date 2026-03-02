@@ -33,13 +33,12 @@ const { mouseLeave, mouseMove, mousePosition } = useMouseMotion()
                 ></div>
             </div>
 
-            <div class="h-[40vw] flex flex-row justify-around z-20 pointer-events-none top-0 inset-x-0 absolute">
+            <<div class="h-[40vw] flex flex-row justify-around z-20 pointer-events-none top-0 inset-x-0 absolute">
                     <img class="parpado"
                     src="/imagenes/casa/parpado.png" alt="">
 
                     <img class="parpado"
                     src="/imagenes/casa/parpadoIZQ.png" alt="">
-
             </div>
             
             <div class="text-white text-[3vw] transition-all sm:text-[4vw] lg:text-[5vw] pb-3 z-30 absolute text-center mx-auto w-screen bottom-[1%] pointer-events-none">

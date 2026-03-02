@@ -11,6 +11,7 @@ import {
 //import { router } from '@/router';
 
 import { scrollToSection } from '@/utils/scrollToSection';
+import { useRouter } from 'vue-router';
 
 
 const menuItems = [
@@ -30,6 +31,17 @@ const menuItems = [
     onClick: () => scrollToSection('#diseno'),
   },
 ]
+
+const cursorRouter = useRouter();
+ 
+// NUEVO
+const irSeccionObras = (hash: string) => {
+  cursorRouter.push({
+        path: '/portfolio',
+        hash: hash
+    });
+};
+
 </script>
 
 <template>
@@ -48,15 +60,14 @@ const menuItems = [
 
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>
-                        <RouterLink to="/portfolio">
                            Trabajos 
-                        </RouterLink>
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                     <NavigationMenuItem v-for="item in menuItems" :key="item.label">
                             <a
                             :href="item.href"
                             @click.prevent="item.onClick ? item.onClick() : null"
+                            @click="irSeccionObras(item.href)"
                             >
                                 <NavigationMenuLink>
 
