@@ -54,9 +54,9 @@ const obra = ref<Obra | undefined>(
                         </div>
                     </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious class="flex  justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
+                    <CarouselPrevious v-show="obra.imagen.length > 1" class="flex justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
                     lg:scale-130" />
-                    <CarouselNext class="flex  justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
+                    <CarouselNext v-show="obra.imagen.length > 1" class="flex justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
                     lg:scale-130"/>
                 </Carousel>
             </div>
