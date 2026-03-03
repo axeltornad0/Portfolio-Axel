@@ -1,5 +1,7 @@
 import About from "@/pages/About/About.vue";
 import Home from "@/pages/home/Home.vue";
+import Detalle from "@/pages/Trabajos/Detalle.vue";
+import Layout from "@/pages/Trabajos/Layout.vue";
 import Trabajos from "@/pages/Trabajos/Trabajos.vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 
@@ -16,8 +18,24 @@ export const router = createRouter({
     },
     {
       path: '/portfolio',
-      name: 'trabajos',
-      component: Trabajos
+      children: [
+        {
+          path: '',
+          name: 'trabajos',
+          component: Trabajos
+        },
+        {
+          path: 'galeria',
+          component: Layout,
+          children: [
+            {
+              path: ':id',
+              name: 'obra-detalle',
+              component: Detalle
+            }
+          ]
+        },
+      ],
     },
     {
       path: '/about-me',

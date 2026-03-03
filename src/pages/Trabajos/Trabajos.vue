@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { obras } from './obrasDetalles';
+import { router } from '@/router';
 
 let ilustracion = obras.slice(0,10);
 let comic = obras.slice(11,13);
@@ -29,6 +30,7 @@ let otros = obras.slice(18,19);
             >
                 <CardContent
                 class="flex flex-col items-center gap-1 w-full my-1 mx-1 "
+                @click="router.push(`/portfolio/galeria/${obra.id}`)"
                 >
                     <div class="absolute w-50 h-50 mt-2 flex items-end justify-center
                     hover:bg-black/40 hover:backdrop-blur-md text-white/0 hover:text-white
@@ -65,7 +67,8 @@ let otros = obras.slice(18,19);
             v-for="obra in comic"
             >
                 <CardContent
-                class="flex flex-col items-center gap-1 w-full my-1 mx-1 "
+                class="flex flex-col items-center gap-1 w-full my-1 mx-1"
+                
                 >
                     <div class="absolute w-50 h-50 mt-2 flex items-end justify-center
                     hover:bg-black/40 hover:backdrop-blur-md text-white/0 hover:text-white
@@ -166,14 +169,14 @@ let otros = obras.slice(18,19);
         <div class="transition-all grid grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
             <Card
             class="cursor-pointer w-50 h-75 text-white
-            sm:w-70 sm:h-85
+            sm:w-70 sm:h-85 sm:mb-5
             md:w-80 md:h-100
-            xl:w-100 xl:h-110
+            xl:w-100 xl:h-110 xl:mb-10
             "
             v-for="obra in otros"
             >
                 <CardContent
-                class="flex flex-col items-center gap-1 w-full my-1 mx-1 "
+                class="flex flex-col items-center gap-1 w-full my-1 mx-1"
                 >
                     <div class="absolute w-50 h-50 mt-2 flex items-end justify-center
                     hover:bg-black/40 hover:backdrop-blur-md text-white/0 hover:text-white
