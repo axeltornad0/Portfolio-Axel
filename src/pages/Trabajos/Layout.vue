@@ -1,11 +1,18 @@
 <script setup lang="ts">
+import { X } from 'lucide-vue-next';
+import Button from '@/components/ui/button/Button.vue';
+
 
 </script>
 
 <template>
-    <div>
-        <header class="bg-blue-200">
-            Header chulo en el que habrá cosas lol (o no?)
+    <div class="bg-black">
+        <header class="flex items-center justify-end">
+            <Button variant="exit" class="scale-100 lg:scale-130 m-10 mb-[-50px]" size="exit">
+                <RouterLink to="/portfolio">
+                    <X />
+                </RouterLink>
+            </Button>
         </header>
 
         <main>
