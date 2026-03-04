@@ -10,7 +10,7 @@ import Navegacion from './components/Navegacion.vue';
 <template>
   
 
-  <div class="grid grid-row-[auto_1fr_auto]">
+  <div class="grid grid-row-[auto_1fr_auto] flex-col">
     <header>
       <Navegacion class="z-30 absolute"/>
     </header>
@@ -19,8 +19,9 @@ import Navegacion from './components/Navegacion.vue';
       <RouterView />
     </main>
 
-    <footer class="text-[12px] p-2 flex items-end justify-center">
+    <footer class="text-[12px] py-2 flex items-center justify-end flex-col bg-gray-900 text-white/80">
       <p> Página creada por Axel Tornado, 2026. </p>
+      <p> *Poner iconos de redes sociales* </p>
     </footer>
 
   </div>

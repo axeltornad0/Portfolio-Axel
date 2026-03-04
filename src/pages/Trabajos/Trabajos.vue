@@ -2,6 +2,7 @@
 import { obras } from './obrasDetalles';
 import { router } from '@/router';
 
+
 let ilustracion = obras.slice(0,10);
 let comic = obras.slice(11,13);
 let personajes = obras.slice(13,15);
@@ -12,23 +13,20 @@ let otros = obras.slice(18,19);
 </script>
 
 <template>
-    <div>
-        <h1 class="text-4xl text-center py-1.5">MIS TRABAJOS</h1>
-    </div>
 
     <section id="ilustracion" class="bg-black text-white">
         <h1 class="text-3xl text-center py-2 pt-5"> Ilustración </h1>
 
         <div class="transition-all grid grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
-            <Card
-            class="cursor-pointer w-50 h-75 text-white
+            <div
+            class="cursor-pointer w-50 h-75 text-white border-0 p-0 gap-0 bg-black
             sm:w-70 sm:h-85
             md:w-80 md:h-100
             xl:w-100 xl:h-110
             "
             v-for="obra in ilustracion"
             >
-                <CardContent
+                <div
                 class="flex flex-col items-center gap-1 w-full my-1 mx-1 "
                 @click="router.push(`/portfolio/galeria/${obra.id}`)"
                 >
@@ -48,8 +46,8 @@ let otros = obras.slice(18,19);
                     >
 
                     <h2 class="font-medium text-lg lg:text-xl text-center pt-3"> {{ obra.titulo }} </h2>
-                </CardContent>
-            </Card>  
+                </div>
+            </div>  
         </div>
 
     </section>

@@ -63,7 +63,7 @@ const irSeccionObras = (hash: string) => {
 
 <template>
     <div>
-        <nav class="extra-nav">
+        <nav class="extra-nav bg-blue-50">
             <NavigationMenu>
                 <NavigationMenuList >
                 
@@ -80,14 +80,14 @@ const irSeccionObras = (hash: string) => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>
-                        <span class="flex flex-row flex-nowrap">
+                    <NavigationMenuTrigger class="bg-blue-50">
+                        <span class="flex flex-row flex-nowrap ">
                             <Palette class="iconos"/>
-                            Trabajos 
+                            Portfolio 
                         </span>
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                    <NavigationMenuItem v-for="item in menuItems" :key="item.label">
+                    <NavigationMenuContent class="bg-blue-50">
+                    <NavigationMenuItem v-for="item in menuItems" :key="item.label" >
                             <a
                             :href="item.href"
                             @click.prevent="item.onClick ? item.onClick() : null"
@@ -127,7 +127,6 @@ const irSeccionObras = (hash: string) => {
 
 <style scoped>
 .extra-nav {
-  background-color: white;
   position: fixed;
   top: 0;
   width: 100%;
