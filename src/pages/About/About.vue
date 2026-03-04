@@ -65,9 +65,12 @@ import { Button } from '@/components/ui/button';
             </Card>
         </div>
     </div>
+    
 
     <div class="bg-black text-white text-center pt-10 flex flex-col items-center" >
         <h2 class="text-xl">¿Quieres decirme algo?</h2>
+
+        
 
         <form class="space-y-6 py-8 rounded-lg shadow-lg w-[60vw]">
             <div>

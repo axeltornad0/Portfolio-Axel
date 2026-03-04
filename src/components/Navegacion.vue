@@ -68,7 +68,7 @@ const irSeccionObras = (hash: string) => {
                 <NavigationMenuList >
                 
                 <NavigationMenuItem >
-                    <NavigationMenuLink >
+                    <NavigationMenuLink class=" hover:bg-white">
                     <RouterLink to="/">
                         <span class="flex flex-row flex-nowrap">
                             <HouseHeart class="iconos"/>
@@ -80,7 +80,7 @@ const irSeccionObras = (hash: string) => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger class="bg-blue-50">
+                    <NavigationMenuTrigger class="bg-blue-50 hover:bg-white data-[state=open]:hover:bg-white">
                         <span class="flex flex-row flex-nowrap ">
                             <Palette class="iconos"/>
                             Portfolio 
@@ -94,7 +94,7 @@ const irSeccionObras = (hash: string) => {
                             @click="irSeccionObras(item.href)"
                             >
                                 <NavigationMenuLink
-                                class="w-25 md:w-40">
+                                class="w-25 md:w-40 hover:bg-white">
 
                                 {{item.label}}
                                 </NavigationMenuLink>
@@ -104,7 +104,7 @@ const irSeccionObras = (hash: string) => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <NavigationMenuLink>
+                    <NavigationMenuLink class=" hover:bg-white">
                     <RouterLink to="/about-me">
                         <span class="flex flex-row flex-nowrap">
                             <Fish class="iconos"/>
