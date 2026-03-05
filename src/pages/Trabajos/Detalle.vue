@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { obras, type Obra } from './obrasDetalles';
+import { obras, type Obra,} from './obrasDetalles';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
@@ -23,7 +23,7 @@ const obra = ref<Obra | undefined>(
 
 <template>
     <div
-    class="flex transition-all flex-col justify-between items-center text-white transition-all"
+    class="flex transition-all flex-col justify-between items-center text-white text-center mx-5"
     v-if="obra"
     >
             <h1 class="text-2xl pb-1"> {{obra.titulo}} </h1>
@@ -31,6 +31,13 @@ const obra = ref<Obra | undefined>(
             <p class="text-sm text-blue-100/60 pb-3">{{ obra.fecha }}</p>
 
             <p class="pb-5"> {{ obra.descripcion }} </p>
+
+            <p v-show="obra.url" class="underline text-blue-100/60 decoration-blue-100/45 hover:text-blue-100 hover:decoration-blue-100 text-sm -mt-4 pb-5 transition-all">
+                <a href="https://youtu.be/QSYjuyVTQ94?si=5lqxQobANdSjUP30"
+                target="_blank">
+                    ¡Échale un vistazo al corto!
+                </a>
+            </p>
 
             <div>
                 <Carousel class="w-[65vw] relative"

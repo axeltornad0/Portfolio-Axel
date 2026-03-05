@@ -5,6 +5,7 @@ export interface Obra {
   grid: string;
   fecha: string;
   descripcion?: string;
+  url?: boolean;
 }
 
 export const obras: Obra[] = [
@@ -16,7 +17,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Libro-p1","ILUST-Libro-p2","ILUST-Libro-p3","ILUST-Libro-p4",],
         grid: "GRID-ILUST-Libro",
         fecha: 'Diciembre, 2025',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. Tarea para la asignatura de Ilustración, lenguajes y técnicas.',
     },
     {
         id: 1,
@@ -24,15 +25,16 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Rei",],
         grid: "GRID-ILUST-Rei",
         fecha: 'Septiembre, 2025',
-        descripcion: 'Fanart de la serie "Evangelion"',
+        descripcion: 'Fanart de la serie "Evangelion".',
     },
     {
         id: 2,
-        titulo: "Comisión para Metrecalia (Web Series)",
+        titulo: "Comisión para Metrecalia",
         imagen: ["ILUST-Comi","ILUST-Comi-p1","ILUST-Comi-p2","ILUST-Comi-p3","ILUST-Comi-p4",],
         grid: "GRID-ILUST-Comi",
         fecha: 'Septiembre, 2025',
-        descripcion: 'HHH',
+        descripcion: 'Ilustración encargada para la serie web "Metrecalia" para aparecer en uno de los cortos.',
+        url: true,
     },
     {
         id: 3,
@@ -40,7 +42,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Warrior", "ILUST-Warrior-p1","ILUST-Warrior-p2","ILUST-Warrior-p3","ILUST-Warrior-p4",],
         grid: "GRID-ILUST-Warrior",
         fecha: 'Junio, 2025',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. Proyecto personal.',
     },
     {
         id: 4,
@@ -48,7 +50,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Grahim",],
         grid: "GRID-ILUST-Grahim",
         fecha: 'Junio, 2025',
-        descripcion: 'Fanart de "The Legend of Zelda: Skywar Sword"',
+        descripcion: 'Fanart de "The Legend of Zelda: Skywar Sword".',
     },
     {
         id: 5,
@@ -56,7 +58,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Torre","ILUST-Torre-p1","ILUST-Torre-p2","ILUST-Torre-p3","ILUST-Torre-p4",],
         grid: "GRID-ILUST-Torre",
         fecha: 'Junio, 2025',
-        descripcion: 'HHH',
+        descripcion: 'Estudio de ambiente.',
     },
     {
         id: 6,
@@ -80,7 +82,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Photobashing","ILUST-Photobashing-p1","ILUST-Photobashing-p2","ILUST-Photobashing-p3",],
         grid: "GRID-ILUST-Photobashing",
         fecha: 'Diciembre, 2024',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. Proyecto personal.',
     },
     {
         id: 9,
@@ -88,7 +90,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-MAAKTARE","ILUST-MAAKTARE-p1","ILUST-MAAKTARE-p2",],
         grid: "GRID-ILUST-MAAKTARE",
         fecha: 'Octubre, 2024',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. El diseño de la carátula de un videojuego ficticio. Tarea para la asignatura de Historia del Diseño y las Tecnologías Creativas. ',
     },
     {
         id: 10,
@@ -96,7 +98,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Marcille","ILUST-Marcille-sangre","ILUST-Marcille-p1","ILUST-Marcille-p2",],
         grid: "GRID-ILUST-Marcille",
         fecha: 'Julio, 2024',
-        descripcion: 'Fanart de la serie "Dungeon Meshi"',
+        descripcion: 'Fanart de la serie "Dungeon Meshi".',
     },
 
     //COMIC
@@ -107,7 +109,7 @@ export const obras: Obra[] = [
         imagen: ["COMIC-Haru-p1","COMIC-Haru-p2",],
         grid: "GRID-COMIC-Haru",
         fecha: 'Enero, 2026',
-        descripcion: 'HHH',
+        descripcion: 'Fan-cómic de "Inazuma Eleven".',
     },
     {
         id: 12,
@@ -115,7 +117,7 @@ export const obras: Obra[] = [
         imagen: ["COMIC-Salto-p1","COMIC-Salto-p2",],
         grid: "GRID-COMIC-Salto",
         fecha: 'Octubre, 2025',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. Tarea para la asignatura de Ilustración, lenguajes y técnicas.',
     },
 
     //DISEÑO PJS
@@ -126,7 +128,7 @@ export const obras: Obra[] = [
         imagen: ["PJS-Dispatch","PJS-Dispatch-p1","PJS-Dispatch-p2","PJS-Dispatch-p3","PJS-Dispatch-p4","PJS-Dispatch-p5",],
         grid: "GRID-PJS-Dispatch",
         fecha: 'Enero, 2026',
-        descripcion: 'HHH',
+        descripcion: 'Reimaginación de los personajes del videojuego "Dispatch" como personajes jugables de Dragones y Mazmorras.',
     },
     {
         id: 14,
@@ -134,7 +136,7 @@ export const obras: Obra[] = [
         imagen: ["PJS-Elian-p1","PJS-Elian-p2",],
         grid: "GRID-PJS-Elian",
         fecha: 'Agosto, 2024',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. Uno de mis personajes de Dragones y Mazmorras.',
     },
 
     //DISEÑO GRAF
@@ -145,7 +147,7 @@ export const obras: Obra[] = [
         imagen: ["DIS-Envidia"],
         grid: "GRID-DIS-Envidia",
         fecha: 'Febrero, 2026',
-        descripcion: 'Hecho con Laura Zaragoza',
+        descripcion: 'Hecho con Laura Zaragoza. Tarea para la asignatura de Elementos del diseño.',
     },
     {
         id: 16,
@@ -153,7 +155,7 @@ export const obras: Obra[] = [
         imagen: ["DIS-Cooestima-p1","DIS-Cooestima-p2","DIS-Cooestima-p3","DIS-Cooestima-p4","DIS-Cooestima-p5",],
         grid: "GRID-DIS-Cooestima",
         fecha: 'Mayo, 2025',
-        descripcion: 'Hecho con Leire Benítez, Mónica Hernández y Laura Zaragoza',
+        descripcion: 'Hecho con Leire Benítez, Mónica Hernández y Laura Zaragoza. Proyecto Transversal II de Diseño y Tecnologías creativas.',
     },
     {
         id: 17,
@@ -161,7 +163,7 @@ export const obras: Obra[] = [
         imagen: ["DIS-Kaoka-p1","DIS-Kaoka-p2","DIS-Kaoka-p3","DIS-Kaoka-p4",],
         grid: "GRID-DIS-Kaoka",
         fecha: 'Marzo, 2025',
-        descripcion: 'Hecho con Mónica Hernández y Laura Zaragoza',
+        descripcion: 'Hecho con Mónica Hernández y Laura Zaragoza. Tarea para la asignatura de Fundamentos del diseño.',
     },
 
     //OTROS
@@ -172,7 +174,7 @@ export const obras: Obra[] = [
         imagen: ["OTR-Bichos-p0","OTR-Bichos-p1","OTR-Bichos-p2","OTR-Bichos-p3",],
         grid: "GRID-OTR-Bichos",
         fecha: 'Octubre, 2025',
-        descripcion: 'HHH',
+        descripcion: 'Pieza original. Tarea para la asignatura de Tipografía.',
     },
     
 ]

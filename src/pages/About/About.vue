@@ -44,7 +44,7 @@ import { Button } from '@/components/ui/button';
             
             <div class="">
                 <p class="mt-5">¡Hola! Soy Axel Tornado <span class="text-sm text-blue-100/60">(o Axel Martínez, si queremos ser más formales)</span>. </p>
-                <p class="mt-2">Me gradué en <span class="font-semibold">Bachillerato Artístico</span> en el IES Isaac Peral (Cartagena) en 2024, y actualmente curso <span class="font-semibold">Diseño y Tecnologías Creativas</span> en la Universidad Politécnica de Valencia <span class="text-sm text-blue-100/60">(UPV para los amigos)</span>.</p>
+                <p class="mt-2">Me gradué en <span class="font-semibold">Bachillerato Artístico</span> en el IES Isaac Peral (Cartagena, España) en 2024, y actualmente curso <span class="font-semibold">Diseño y Tecnologías Creativas</span> en la Universidad Politécnica de Valencia <span class="text-sm text-blue-100/60">(UPV para los amigos)</span>.</p>
                 <p class="mt-5">¿Qué? ¿Que te cuente un poco más de mí? </p>
                 <p>Me interesa la ilustración, el concept art, el cómic... Pero lo que más prevalece en mí es la <span class="font-semibold">necesidad de crear</span>. Sueño con hacer mundos e historias que hagan sentir de todo a la gente. Como cualquier artista, tengo proyectos que por ahora nunca han salido a la luz, pero que espero poder mostrar al mundo dentro de poco.</p>
                 <p class="text-sm text-blue-100/60">(También programo de vez en cuando, como esta web...)</p>

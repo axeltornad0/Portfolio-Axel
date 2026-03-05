@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { useMouseMotion } from '@/composables/useMouseMotion';
-
 import { Card, CardContent } from '@/components/ui/card'
 import {
   Carousel,
@@ -22,7 +20,7 @@ const seleccion: string[] = ["EXTRA-ILUST-Warrior","EXTRA-ILUST-Disco","EXTRA-IL
     
             
     <div class="bg-black text-white transition-all sm:text-[4vw] lg:text-[5vw] pb-3 pt-6 text-center">
-        <h1 >AXEL TORNADO</h1>
+        <h1 class="titulo">AXEL TORNADO</h1>
     </div>      
 </header>
 
@@ -30,7 +28,7 @@ const seleccion: string[] = ["EXTRA-ILUST-Warrior","EXTRA-ILUST-Disco","EXTRA-IL
 <div class="bg-black flex flex-col gap-8 justify-between items-center text-white transition-all">
     <!-- paso el carrusel a un componente o hago otro aquí?? decisions decisions.... no es tan complicado creo hmmm -->
     
-    <RouterLink to="/portfolio" class="w-[99vw] aspect-1920/640 absolute z-20 text-white/0
+    <RouterLink to="/portfolio" class="w-[99vw] aspect-1920/700 absolute z-20 text-white/0
     flex items-center justify-center flex-col
     hover:text-blue-100 transition-colors hover:bg-gray-900/40 hover:backdrop-blur-sm">
         <div class="flex items-center justify-center flex-col md:text-xl lg:text-3xl">
@@ -76,24 +74,8 @@ const seleccion: string[] = ["EXTRA-ILUST-Warrior","EXTRA-ILUST-Disco","EXTRA-IL
 </template>
 
 <style scoped>
-    h1 {
+    .titulo {
         font-family: Stack Sans Headline;
-    }
-
-    div#pupila {
-        max-width: 40vw;
-        max-height: 40vw;
-        background-size: 100% 100%;
-        background-position: center center;
-        background-color: white;
-        background-image: url('../imagenes/casa/pupila.png');
-        background-repeat: no-repeat;
-        aspect-ratio: 1/1;
-    }
-
-    .parpado {
-        object-fit: contain;
-        max-width: 40vw;
     }
 
 </style>
