@@ -56,7 +56,7 @@ import { Button } from '@/components/ui/button';
     <div class="bg-black text-white text-center pt-10 ">
         <h1 class="text-xl ">Programas dominados</h1>
         <div class="grid grid-cols-2 md:grid-cols-3 mx-3 gap-3">
-            <Card v-for="programa in programas" class="transition-all hover:scale-105 lg:hover:scale-110 bg-white/0 border-0 text-white rounded-none">
+            <Card v-for="programa in programas" class="transition-all hover:scale-105 bg-white/0 border-0 text-white rounded-none">
                 <CardContent class="flex flex-col items-center">
                     <img class="h-[100px] object-contain" :src="`/imagenes/yo/${programa.logo}.png`" alt="">
                     <p class="flex flex-col justify-end mt-6">{{ programa.nombre }}</p>

@@ -2,7 +2,6 @@ export interface Obra {
   id: number;
   titulo: string;
   imagen: string[];
-  textoDet?: string[];
   grid: string;
   fecha: string;
   descripcion?: string;

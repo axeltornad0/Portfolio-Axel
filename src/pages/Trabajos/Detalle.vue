@@ -23,14 +23,14 @@ const obra = ref<Obra | undefined>(
 
 <template>
     <div
-    class="flex transition-all flex-col gap-8 justify-between items-center text-white transition-all"
+    class="flex transition-all flex-col justify-between items-center text-white transition-all"
     v-if="obra"
     >
-            <h1 class="text-2xl pt-5"> {{obra.titulo}} </h1>
+            <h1 class="text-2xl pb-1"> {{obra.titulo}} </h1>
 
-            <p class="text-sm">{{ obra.fecha }}</p>
+            <p class="text-sm text-blue-100/60 pb-3">{{ obra.fecha }}</p>
 
-            <p> {{ obra.descripcion }} </p>
+            <p class="pb-5"> {{ obra.descripcion }} </p>
 
             <div>
                 <Carousel class="w-[65vw] relative"
@@ -39,15 +39,13 @@ const obra = ref<Obra | undefined>(
                     <CarouselContent class="flex items-center">
                     <CarouselItem v-for="(detalle,index) in obra.imagen" :key="index">
                         <div>
-                        <Card class="flex items-center justify-center border-0 p-0 gap-0 bg-black/0">
+                        <Card class="flex items-center justify-center border-0 p-0 gap-0 bg-black/0 pb-5">
                             <CardContent class="flex flex-col items-center justify-center">
                                 <img
                                 :src="`imagenes/trabajos/${detalle}.jpg`"
                                 :alt="`Imagen ${index+1}`"
                                 class="max-h-[650px] w-auto object-contain"
                                 >
-
-                                <p class="text-center text-xs md:text-sm py-3 text-white/70"> Poner un array de string más que ponga cosas del proceso? que sea opcional!! </p>
 
                             </CardContent>
                         </Card>
