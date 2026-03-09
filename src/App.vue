@@ -11,13 +11,13 @@ import LogoX from './components/logoX.vue';
 <template>
   
 
-  <div class="grid grid-row-[auto_1fr_auto] flex-col">
+  <div class="grid grid-row-[auto_1fr_auto]">
     <header>
       <Navegacion class="z-30 absolute"/>
     </header>
       
     <main class="pt-7">   
-      <RouterView />
+      <RouterView/>
     </main>
 
     <footer class="text-[15px] py-2 flex items-center justify-end flex-col bg-gray-900 text-blue-100/70">
