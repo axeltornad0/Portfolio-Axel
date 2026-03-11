@@ -23,14 +23,16 @@ const obra = ref<Obra | undefined>(
 
 <template>
     <div
-    class="flex transition-all flex-col justify-between items-center text-white text-center mx-5"
+    class="flex transition-all min-h-[70vh] flex-col justify-between items-center text-white text-center mx-5"
     v-if="obra"
     >
-            <h1 class="text-2xl pb-1"> {{obra.titulo}} </h1>
+
+    <div>
+        <h1 class="text-2xl pb-1"> {{obra.titulo}} </h1>
 
             <p class="text-sm text-blue-100/60 pb-3">{{ obra.fecha }}</p>
 
-            <p class="pb-5"> {{ obra.descripcion }} </p>
+            <p class="pb-5 mx-4"> {{ obra.descripcion }} </p>
 
             <p v-show="obra.url" class="underline text-blue-100/60 decoration-blue-100/45 hover:text-blue-100 hover:decoration-blue-100 text-sm -mt-4 pb-5 transition-all">
                 <a href="https://youtu.be/QSYjuyVTQ94?si=5lqxQobANdSjUP30"
@@ -38,9 +40,11 @@ const obra = ref<Obra | undefined>(
                     ¡Échale un vistazo al corto!
                 </a>
             </p>
+    </div>
+            
 
             <div>
-                <Carousel class="w-[65vw] relative"
+                <Carousel class="w-[75vw] relative"
                 :opts="{ loop:true, align: 'start'
                 }">
                     <CarouselContent class="flex items-center">
@@ -59,9 +63,9 @@ const obra = ref<Obra | undefined>(
                         </div>
                     </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious v-show="obra.imagen.length > 1" class="flex justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
+                    <CarouselPrevious v-show="obra.imagen.length > 1" class="hover:cursor-pointer flex justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
                     lg:scale-130" />
-                    <CarouselNext v-show="obra.imagen.length > 1" class="flex justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
+                    <CarouselNext v-show="obra.imagen.length > 1" class="hover:cursor-pointer flex justify-center items-center bg-black text-white border-0 hover:bg-white/30 hover:text-white
                     lg:scale-130"/>
                 </Carousel>
             </div>

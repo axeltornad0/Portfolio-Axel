@@ -80,7 +80,7 @@ const irSeccionObras = (hash: string) => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger class="bg-blue-50 hover:bg-white data-[state=open]:hover:bg-white">
+                    <NavigationMenuTrigger class="bg-blue-50 hover:bg-white data-[state=open]:hover:bg-white hover:cursor-pointer">
                         <span class="flex flex-row flex-nowrap ">
                             <Palette class="iconos"/>
                             Portfolio 

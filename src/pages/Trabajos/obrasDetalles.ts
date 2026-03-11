@@ -17,7 +17,7 @@ export const obras: Obra[] = [
         imagen: ["ILUST-Libro-p1","ILUST-Libro-p2","ILUST-Libro-p3","ILUST-Libro-p4",],
         grid: "GRID-ILUST-Libro",
         fecha: 'Diciembre, 2025',
-        descripcion: 'Pieza original. Tarea para la asignatura de Ilustración, lenguajes y técnicas.',
+        descripcion: 'Pieza original. Tarea para la asignatura de Ilustración, lenguajes y técnicas. Debíamos diseñar la cubierta (portada, lomo y contraportada), la guarda, una ilustración de una página, y una ilustración a doble página para "La Vuelta al Mundo en 80 días".',
     },
     {
         id: 1,

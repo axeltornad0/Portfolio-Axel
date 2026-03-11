@@ -9,22 +9,46 @@ import {
 } from '@/components/ui/carousel'
 
 import Autoplay from 'embla-carousel-autoplay'
+import { ref } from 'vue'
 
 const seleccion: string[] = ["EXTRA-ILUST-Warrior","EXTRA-ILUST-Disco","EXTRA-ILUST-Rei"]
+
+const gomet1 = ref<string>('gomet-pc1')
+const gomet2 = ref<string>('gomet-dibujo1')
+
 
 </script>
 
 <template>
 
-<div class="bg-black  text-white text-center">
+<div class="bg-black text-white text-center">
     <div class=" pb-3 pt-6 ">
         <p class="text-md transition-all md:text-xl lg:text-3xl">Hola, soy</p>
         <p class="titulo transition-all text-3xl md:text-6xl lg:text-9xl"> AXEL TORNADO</p>
         <p class="text-md transition-all md:text-xl lg:text-3xl pt-5"> ¡Te doy la bienvenida a mi página web! </p>
     </div>
 
-    <div class="h-[400px] text-sm">
-        <p>aqui hay pegatinas o algo asi y si les clicas te llevan al sobre mí</p>
+    <div class="flex flex-row justify-evenly items-center">
+        <img
+        class="scale-70 hover:scale-75 md:scale-100 md:hover:scale-105 hover:rotate-10 transition-all"
+        :src="`/imagenes/casa/${gomet1}.png`"
+        alt=""
+        
+        @mouseenter="gomet1='gomet-pc2'"
+        @mouseleave="gomet1='gomet-pc1'"
+        @click="$router.push('/about-me')"
+        >
+
+        <img
+        class="scale-60 hover:scale-65 md:scale-80 md:hover:scale-85 hover:rotate-10 transition-all"
+        :src="`/imagenes/casa/${gomet2}.png`"
+        alt=""
+        
+        @mouseenter="gomet2='gomet-dibujo2'"
+        @mouseleave="gomet2='gomet-dibujo1'"
+        @click="$router.push('/about-me')"
+        >
+
     </div>
 
     <div class="flex flex-col gap-8 justify-between items-center text-white transition-all">

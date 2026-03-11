@@ -85,21 +85,21 @@ import { Button } from '@/components/ui/button';
 
             <div>
                 <Select>
-                    <SelectTrigger class="w-[60vw] lg:text-lg text-md bg-blue-200/20  border-blue-200/50">
+                    <SelectTrigger class="hover:cursor-pointer w-[60vw] lg:text-lg text-md bg-blue-200/20  border-blue-200/50">
                         <SelectValue  placeholder="¿Sobre qué tema quieres hablar?" />
                     </SelectTrigger>
 
-                    <SelectContent class="lg:text-lg text-sm bg-blue-100"">
-                        <SelectItem value="comis">
+                    <SelectContent class=" lg:text-lg text-sm bg-blue-100"">
+                        <SelectItem value="comis" class="hover:cursor-pointer">
                             Comisiones
                         </SelectItem>
-                        <SelectItem value="estudios">
+                        <SelectItem value="estudios" class="hover:cursor-pointer">
                             Estudios
                         </SelectItem>
-                        <SelectItem value="proyectos">
+                        <SelectItem value="proyectos"class="hover:cursor-pointer">
                             Proyectos
                         </SelectItem>
-                        <SelectItem value="otro">
+                        <SelectItem value="otro"class="hover:cursor-pointer">
                             Otra cosa
                         </SelectItem>
                     </SelectContent>
@@ -111,7 +111,7 @@ import { Button } from '@/components/ui/button';
                 <Textarea id="mensaje" placeholder="Mensaje" class="lg:text-lg text-base bg-blue-200/20 focus:bg-blue-100 focus:text-black border- border-blue-200/50" required />
             </div>
 
-            <Button class="w- bg-blue-100 text-black text-md mt-4 hover:text-blue-100 hover:bg-blue-100/15">
+            <Button class="hover:cursor-pointer bg-blue-100 text-black text-md mt-4 hover:text-blue-100 hover:bg-blue-100/15">
                 Enviar
             </Button>
 

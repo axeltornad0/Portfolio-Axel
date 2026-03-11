@@ -30,7 +30,7 @@ let otros = obras.slice(18,19);
                 class="flex flex-col items-center gap-1 w-full my-1 mx-1 "
                 @click="router.push(`/portfolio/galeria/${obra.id}`)"
                 >
-                    <div class="absolute w-50 h-50 mt-2 flex items-end justify-center
+                    <div class="absolute w-50 h-50 flex items-end justify-center
                     hover:bg-black/40 hover:backdrop-blur-md text-white/0 hover:text-white
                     transition-all
                     sm:w-70 sm:h-70
@@ -41,7 +41,7 @@ let otros = obras.slice(18,19);
                     </div>
 
                     <img 
-                    class="object-contain mt-2 felx items-center"
+                    class="object-contain felx items-center"
                     :src="`/imagenes/trabajos/${obra.grid}.jpg`" alt=""
                     >
 
